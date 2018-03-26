@@ -7,6 +7,13 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-function vowels(str) {}
+function vowels(str) {
+	const vow = "aeiouAEIOU";
+	let vowCount = 0;
+	for (let chr of str.split("")) {
+		if (vow.includes(chr)) vowCount++;
+	}
+	return vowCount;
+}
 
 module.exports = vowels;
